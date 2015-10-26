@@ -1,0 +1,12 @@
+# Site settings
+title: Lucas Persson
+email: luben93@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+    a small page about me
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://luben93.github.io" # the base hostname & protocol for your site
+twitter_username: luben93
+github_username:  luben93
+
+# Build settings
+markdown: kramdown
