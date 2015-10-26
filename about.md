@@ -4,8 +4,5 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Lucas Persson is a dedicated fullstack developer and Sys Admin, currently working part time and studying computer engineering at KTH, on my spare time i hack on ARM based chips and electronics or software, my daily setup is a OSX laptop and linux servers, favorite editors are: Inteillij IDEA, vim and sublime text 3. When not geeking away i work as a voluntary bartender and hang in the student unions pub, or engage myself in the student union to make KTH even better. 
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
