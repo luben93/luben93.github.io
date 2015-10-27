@@ -1,2 +1,10 @@
 _site
 .sass-cache
+helvetica.sty
+res.cls
+resume.aux
+resume.dvi
+resume.fdb_latexmk
+resume.fls
+resume.log
+resume.synctex.gz
