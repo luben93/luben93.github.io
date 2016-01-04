@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "i really should blog more"
+date:   2016-1-4 12:42:12
+categories: jekyll update
+---
+
+it's 2016 and im waiting eagerly for the parts i ordered last year. to upgrade my desktop, (it's been a while since last upgrade, sometime in 2011). the parts i have already is the asus Z170-E and be quiet! PURE ROCK, now waiting for the intel i5-6600K and corsair DDR4 16 GB RAM. while i'm still writing i could say that i'm really waiting for a phone to be released that have usb c and usb 3.1, so i can install linux and have it as a ultra portable computer (which i've done on my current phone, but the terminal isn't as nice on a touch keyboard and 5" screen) 
