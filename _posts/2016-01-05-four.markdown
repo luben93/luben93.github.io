@@ -4,3 +4,17 @@ title:  "CI and auto tweet"
 date:   2016-1-5 11:24:12
 categories: jekyll update
 ---
+
+i made a small script and alot of webhooks, so that when i write or update a blog post i tweet and makes a facebook post about it.
+
+#HOW-TO 
+1. what i used:
+	1. github
+	2. codeship
+	3. ruby gem twitter
+	4. IFTTT
+2. how: 
+	1. this blog is already hosted on github so no problem
+	2. added codeship CI, with html-proofer for testing
+	3. wrote a [custom script](https://github.com/luben93/luben93.github.io/blob/master/deploy.rb) for continuous delivery
+	4. then i just connected to [IFTTT](https://ifttt.com/myrecipes/personal/31955078)
