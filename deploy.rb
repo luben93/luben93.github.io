@@ -6,4 +6,4 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = ENV["YOUR_ACCESS_SECRET"]
 end
 
-client.update("I'm tweeting with @gem! check out my blog https://luben93.github.io")
+client.update("i wrote about #{JSON.parse(open("https://api.github.com/repos/luben93/luben93.github.io/commits").read).[0]['commit']['message']}, check it out check out my blog https://luben93.github.io")
