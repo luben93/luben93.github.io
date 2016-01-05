@@ -1,0 +1,6 @@
+---
+layout: post
+title:  "CI and auto tweet"
+date:   2016-1-5 11:24:12
+categories: jekyll update
+---
