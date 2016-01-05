@@ -5,6 +5,28 @@ date:   2016-1-4 17:50:12
 categories: jekyll update
 ---
 
-disclaimer, it doesn't work anymore :(
+disclaimer, it doesn't work anymore, probably my phone that is getting tierd :(
 
-a while ago i was bored and decided that since android is linux based, and my current phone is as powerful as my my last computer (on the sheet ofcourse), that i would run a fullblown linux dist on it, (i'll come back to this, time to eat)
+Intro
+	a while ago i was bored and decided that since android is linux based, and my current phone is as powerful as my my last computer (on the sheet ofcourse), that i would run a fullblown linux dist on it. 
+Setup
+	the phone needs to run Android (obviously) and it also needs to be rooted, then i installed [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy) and followed the on screen instructions, i chose arch linux, because it's my goto dist (simple to get running, not cluttered, lots of docs/community), then i connected via a local ssh session and started hacking away, i could see most of the phone, didn't try to access it, installed vim (spf13), oh my zsh (very slow after that) and tmux, started doing som small C hello worlds, just because. Soon i realised that i needed something better then the auto-correcting swiftkey, so i found [this](https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard), i also tried VNC for GUI, it worked but a 5" screen isn't that much to have on a desktop GUI so i keept working on local SSH. I used Androids chrome to browse to web.
+
+Performace
+	Not to bad actually on my snapdragon 801 w/ 2GB RAM, altough it was slow, it wasn't to slow. the only anoying part was that oh-my-zsh and spf13 slowed it down, next time im gonna stay on bash and vim, and make my own config. but installing programs from pacman, and even running stuff in GUI, worked smoothly. 
+
+Pros
+	+ a full linux system in your pocket.
+	+ good for quick edits in code, when you get that ahaa moment but is nowhere near a terminal 
+	+ fast enough, not over 2 GB of disc space for me
+	+ simple 
+
+Cons
+	- small screen 
+	- touch keyboard
+	- can't run x86 bins (without major tweaking, or building from source) altough i never needed to
+
+Conclusion
+	going to wait for a phone that has USB C and 3.1 (i know about lumia 950, but it runs windows, not simple) and atleast snapdragon 810 and 3+ GB ram, which should be available at the same time my contract runs out.
+
+
