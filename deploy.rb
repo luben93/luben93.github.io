@@ -10,8 +10,6 @@ end
 
 res = JSON.parse(open("https://api.github.com/repos/luben93/luben93.github.io/commits").read)
 
-
-
-unless res[0]['commit']['message'] eq res[1]['commit']['message']  do
+unless res[0]['commit']['message'] eq res[1]['commit']['message']  then
   client.update("i wrote about #{res[0]['commit']['message']}, check it out check, my blog is at https://luben93.github.io #blog")
 end
