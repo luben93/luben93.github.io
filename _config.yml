@@ -10,6 +10,3 @@ github_username:  luben93
 
 # Build settings
 markdown: kramdown
-
-kramdown:
-  input: GFM
