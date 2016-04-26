@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "I really should blog more. Part 2"
+date:   2016-4-25 13:40:12
+categories: jekyll update
+---
+now its been awhile since i last wrot a post, busy studying and working which has been really fun, 
+should write some posts about that as well.
+now all my computer parts has arived, and i have started playing some again, 
+and used the CPU for a preformance test of java, (for a school assaingment)
+and now i've started to run folding@home while just browsing the web, etc.
+And the i5-6600K is a deligt, clocked at 4.5 GHz and 
+it stays relatvivly cool at around 20-30 degrees w/o load,
+and below 65 degrees while running folding@home working all cores 100%.
+And the parts list: 
+
+* CPU:  Intel Core i5-6600K CPU @ 4.5GHz
+* GPU:  Gigabyte GeForce GTX 460 (to be upgraded to SLI or replaced)
+* RAM:  16GB
+* MB:   Asus Z-170E 
+* OS:   Arch Linux / Win10
