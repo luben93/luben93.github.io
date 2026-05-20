@@ -1,100 +1,187 @@
-% LaTeX resume using res.cls
-\documentclass[margin]{res}
-\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-%\usepackage[headheight=0pt,headsep=0pt,bottom=0.1cm]{geometry}
-%\addtolength{\topmargin}{-60pt}
-%\addtolength{\bottommargin}{-60pt}
-%\addtolength{\textheight}{120pt}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
-%\setlength{\textwidth}{5.1in} % set width of text portion
+\geometry{left=8mm,right=8mm,top=8mm,bottom=5mm,columnsep=7mm}
+
+\usepackage{paracol}
+
+\ifxetexorluatex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Tighter cvsection spacing
+\makeatletter
+\renewcommand{\cvsection}[1]{%
+  \par\addvspace{1ex}%
+  {\cvsectionfont\color{heading}#1}\par
+  \smallskip{\color{headingrule}\rule{\linewidth}{1pt}}\par\smallskip}
+\makeatother
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% Tighten itemize spacing globally to help fit one page
+\usepackage{enumitem}
+\setlist[itemize]{topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=2pt,leftmargin=*}
+
+\addbibresource{sample.bib}
 
 \begin{document}
+\name{Lucas Persson}
+\tagline{Senior Backend-Heavy Fullstack Developer}
+\photoR{2.6cm}{lucas-headshot-vimla}
 
-% Center the name over the entire width of resume:
- \moveleft.5\hoffset\centerline{\large\bf Lucas Persson, 19930808-9136}
-% Draw a horizontal line the whole width of resume:
- \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
-% address begins here
-% Again, the address lines must be centered over entire width of resume:
- \moveleft.5\hoffset\centerline{+46730347518, \href{mailto:luben93@gmail.com}{luben93@gmail.com}, \href{https://www.github.com/luben93}{github.com/luben93}}
-  \moveleft.5\hoffset\centerline{Vega Alle 148 1001}
- \moveleft.5\hoffset\centerline{Stockholm, Handen, 13648, Sweden}
+\personalinfo{%
+  \email{luben93@gmail.com}
+  \phone{073-034 75 18}
+  \location{Stockholm, Sweden}
+  \homepage{luben93.github.io}
+  \linkedin{lucas-persson-15363088}
+  \github{luben93}
+}
 
+\makecvheader
 
-\begin{resume}
+\columnratio{0.68}
 
-\sloppy
-\section{EDUCATION} 
-%{\sl\textbf{University Engineering Degree, B.Sc. Engineering:}} Computer Enginerring \\
-{\sl\textbf{Bachelor of Science in Engineering:}} Computer Engineering \hfill enrolled Aug 2012 \\
-                KTH Royal Institute of Technology, Stockholm Sweden  \\
-               %Estimated Graduation: May 2016 \\
-                %Concentration: Computer Science \\
-    {\sl\textbf{Certificates:}} Swedish Drivers Licence: Car \\
-                        ESOL Cambridge Advanced English: Level 2, Grade C 
+\begin{paracol}{2}
+\cvsection{Experience}
 
-\section{COMPUTER \\ SKILLS} 
-    {\sl\textbf{Languages, Work:}} Kotlin, Typescript, Java, Python,  JavaScript \& C\#
-\\
-    {\sl\textbf{Languages, Personal or School:}} C, PHP, Rust, Go, Ruby on Rails, Swift,  Scala, C++, Lua, Bash, Visual Basic, HTML, CSS \& Assembler
-\\
-            {\sl\textbf{ Operating Systems:}} GNU Linux, macOS,  FreeBSD, Android \& windows 
-\\
-             {\sl\textbf{ Software \& Frameworks:}} Amazon AWS, Azure, Git, Docker, Kubernetes, Vertx,  Terminal, Vim, Android API, ASOP, Gradle,  Laravel, Play Framework, Java EE, .NET core, ASP.NET, Nginx, Node.js, React, Meteor.js, Unity, OpenGL, \LaTeX, Oracle SQL, MS SQL, PostgreSQL,  MySQL \& Mozilla Firefox Codebase
-            \\
-              {\sl\textbf{Hardware skills:}} Soldering, Basic RF testing, Hardware Protoyping, Assembly Line Design, ARM, IEEE 802.15.4e, Bare-metal Server installation, Basic Networking \& Kiosk Client Management 
+\cvevent{Senior Java/Kotlin Consultant}{Zero8.io}{October 2021 -- Present}{Stockholm}
+\begin{itemize}
+  \item \textbf{UC / Enento Group}: Senior
+    backend engineer on credit- and business-information platforms.
+    Java, Kotlin, Spring Boot, Kafka, PostgreSQL, Kubernetes.
+    Contributing to AI / LLM initiatives within the product. Brought
+    in for architectural judgement rather than headcount --- trusted
+    with design decisions, build-vs-buy calls, and cross-cutting work;
+    the engineer colleagues turn to for a second opinion or to have
+    an unfamiliar part of the stack explained.
+  \item \textbf{PostNord}: Senior Java backend
+    engineer on logistics-platform services. Java, Kafka, PostgreSQL,
+    OpenShift. Contributed to architecture and integration decisions
+    alongside delivery.
+  \item \textbf{ATG}: Mob-programmed a new high-performance,
+    event-driven microservice backend for International Betting and
+    HarryBoy. Spring Boot, Kotlin, Oracle, Solace, OpenShift. Helped
+    shape event topology, service boundaries, and integration
+    patterns for live race-day betting throughput.
+\end{itemize}
+\divider
 
- 
-\section{EXPERIENCE}
-{\sl Fulltime Employment } \hfill Since Jan 2019 \\
-                Vimla! Telenor, Stockholm Sweden
-                \begin{itemize} \itemsep -3pt
-                \item  Backend Developer: Kotlin, Typescript, JavaScript, SQL, Bash, Python\hfill 
-                \end{itemize}
-{\sl Fulltime Employment } \hfill Jan 2019 - Oct 2016 \\
-                Virtual Stores, Stockholm Sweden \\ 
-                Projects:
-                \begin{itemize} \itemsep -3pt
+\cvevent{Senior Java Consultant}{Nexer Group}{April 2021 -- October 2021}{Stockholm}
+\begin{itemize}
+  \item Hi3G: mob-programmed a new microservice sales backend in
+    Spring Boot, Java, and Kubernetes. DevOps responsibilities across
+    Rancher, Jenkins, Istio, and proxy configuration --- bridging dev
+    and ops rather than throwing things over the wall.
+\end{itemize}
+\divider
 
-                \item Hardware Manager \& Developer:  Android Open Source Project, Java, Python, C++, C, JavaScript\hfill 
-                \item Backend Developer:  C\# dotNET CORE, ASP.NET, PHP, C++, JavaScript\hfill 
-                \end{itemize}
-{\sl Bachelor Thesis: } \hfill March - May 2017\\
-Indoor localization of hand-held Shopping Scanners, KTH
- \begin{itemize} \itemsep -3pt
-                \item Sensor fusion, Java, Python, Hardware Prototyping \hfill 
-                \item \href{http://kth.diva-portal.org/smash/record.jsf?pid=diva2\%3A1108974}{TRITA-STH, 2017:38} \hfill 
-                \end{itemize}
+\cvevent{Backend Software Engineer}{Vimla! / Telenor}{Jan 2019 -- April 2021}{Stockholm}
+\begin{itemize}
+  \item Designed, built, tested, and operated microservices in
+    Node/TypeScript and Quarkus / Vert.x with Kotlin.
+  \item Drove team adoption of mob programming as a core practice ---
+    improving knowledge spread, code quality, and reducing bus-factor
+    risk on critical services.
+\end{itemize}
+\divider
 
-{\sl Halftime Employment } \hfill  Oct 2016 - June 2015 \\
-                Zuccero.com, Stockholm Sweden
-                 \begin{itemize}  \itemsep -3pt %reduce space between items
-                 \item  Tech Projcet Manager: Ruby on Rails, Fullstack Developer and Sys Admin\hfill 
-                \end{itemize}
-{\sl Parttime Employment } \hfill  Aug 2015 - Jan 2015 \\
-                THSKonsulter, Stockholm Sweden
-                 \begin{itemize}  \itemsep -3pt %reduce space between items
-                 \item  Consultant: PHP, Web Developer\hfill 
-                \end{itemize}
-    {\sl Internship } \hfill March - July 2014 \\
-                If Skadeförsäkringar, Stockholm Sweden
-                 \begin{itemize}  \itemsep -3pt %reduce space between items
-                 \item Android Application Developent, mandatory course by KTH 
-                 %$‘‘Mina saker’’, an app for indexing valueble objectes in your home, in case you need to prove what objects where covered by the home insurance.
-                \end{itemize}        
+\cvevent{Software Engineer / Hardware Manager}{VirtualStores}{Oct 2016 -- Jan 2019}{Stockholm}
+\begin{itemize}
+  \item Hand-held shopping-scanner programme: hardware prototyping,
+    AWS server development, mobile app, embedded firmware, and
+    evaluation of partner technologies.
+  \item Fullstack PHP and ASP.NET C\# work plus operational
+    management for shopping kiosks and digital signage on Azure.
+\end{itemize}
+\divider
 
-\section{EXTRA CURRICULAR ACTIVITIES }
-\begin{itemize}  \itemsep -3pt
-            \item Bartender at Björns IsH and Nymble NKM, KTH \hfill 2012 - 2015 
-            \item IT-support \& Webmaster IsH  KTH \hfill 2014 
-            \item Teaching Assistant: C Programming KTH\hfill 2013 - 2015
-            \item Elected {\it Chairman of the Board},  IsH KTH\hfill 2013 
-            \item {\it Chairman of the Board} of a  political youth chapter \hfill 2011
-            \item Summer Employment: Rolls-Royce PLC, Kristinehamn Sweden \hfill 2011 \& 2012
+\cvevent{Fullstack Developer}{Zuccero / Magazinos \& THS Consultings}{March 2015 -- Oct 2016}{Stockholm}
+\begin{itemize}
+  \item Magazinos: digital newspaper distribution platform in Ruby
+    on Rails on AWS.
+  \item OneGetTwo: custom PHP / WordPress booking-service platform on
+    AWS. Edward Lynx: reporting web service in PHP / Laravel.
 \end{itemize}
 
-\end{resume}
+\switchcolumn
+
+\cvsection{Coding Philosophy}
+
+\begin{quote}
+``Writing code together that we all can understand, and surfacing issues before they arise.''
+\end{quote}
+
+\cvsection{Strengths}
+
+\cvtag{Architecture \& design}
+\cvtag{Build-vs-buy judgement}
+\cvtag{Mob / ensemble programming}
+\cvtag{TDD}
+\cvtag{Mentoring \& explaining}
+\cvtag{Polyglot}
+\cvtag{Pragmatic}
+
+\cvsection{Core Stack}
+
+\cvtag{Spring Boot}
+\cvtag{Quarkus}
+\cvtag{Kafka}
+\cvtag{Solace}
+\cvtag{PostgreSQL}
+\cvtag{Oracle}
+\cvtag{Kubernetes}
+\cvtag{OpenShift}
+\cvtag{Docker}
+\cvtag{AWS}
+\cvtag{Azure}
+\cvtag{gRPC}
+\cvtag{OpenAPI}
+\cvtag{CI / CD}
+\cvtag{Splunk}
+
+\cvsection{Languages}
+
+\cvskill{Kotlin}{5}
+\cvskill{Java}{5}
+\cvskill{TypeScript}{5}
+\cvskill{Python}{4}
+\cvskill{C\#}{4}
+\smallskip
+
+\textit{Also worked with:} \cvtag{SQL} \cvtag{Bash} \cvtag{Go} \cvtag{Ruby} \cvtag{Elixir} \cvtag{PHP} \cvtag{Scala} \cvtag{Swift} \cvtag{C/C++} \cvtag{JavaScript} \cvtag{Kafka} \cvtag{NoSQL} \cvtag{AI/LLM}
+\cvtag{K8s/OCP/K3s}
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in Software Engineering}{KTH STH}{paused -- 2012}{}
+Thesis: \emph{Indoor localization of hand-held Shopping Scanners} \href{http://kth.diva-portal.org/smash/record.jsf?pid=diva2\%3A1108974}{TRITA-STH, 2017:38}
+
+\end{paracol}
+
 \end{document}
